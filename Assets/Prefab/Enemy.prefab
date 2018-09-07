@@ -23,6 +23,8 @@ GameObject:
   - component: {fileID: 114414303993900832}
   - component: {fileID: 114554142051928808}
   - component: {fileID: 60899248336503862}
+  - component: {fileID: 50972497767129678}
+  - component: {fileID: 114223136279306384}
   m_Layer: 9
   m_Name: Enemy
   m_TagString: Untagged
@@ -43,6 +45,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &50972497767129678
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1592087606245044}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!60 &60899248336503862
 PolygonCollider2D:
   m_ObjectHideFlags: 1
@@ -52,7 +74,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -95,6 +117,18 @@ PolygonCollider2D:
       - {x: -0.12878132, y: -0.17991066}
       - {x: 0.125, y: -0.19}
       - {x: 0.145, y: -0.16}
+--- !u!114 &114223136279306384
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1592087606245044}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7333ce90bb14674d8b1ed729174dc14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 100
 --- !u!114 &114414303993900832
 MonoBehaviour:
   m_ObjectHideFlags: 1

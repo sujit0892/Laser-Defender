@@ -14,6 +14,7 @@ public class Player : MonoBehaviour {
     [SerializeField] GameObject LaserPreFab;
     [SerializeField] float projectileFiringPeriod = 0.5f;
     [SerializeField] float Health = 100f;
+    [SerializeField] GameObject dealthVfx;
     Coroutine FireCoroutine;
 
     float xMax;
@@ -83,11 +84,18 @@ public class Player : MonoBehaviour {
     private void OnTriggerEnter2D(Collider2D collision)
     {
         DamageDealer damageDealer = collision.gameObject.GetComponent<DamageDealer>();
-        //if (!damageDealer) { return; }
+        if (!damageDealer) { return; }
         Health -= damageDealer.getDamage();
         damageDealer.Hit();
         if (Health <= 0)
+        {
+            FindObjectOfType<LevelLoad>().LoadGameOver();
+            GameObject explosion = Instantiate(dealthVfx, transform.position, transform.rotation);
             Destroy(gameObject);
+            
+
+        }
         AudioSource.PlayClipAtPoint(deathSFx, Camera.main.transform.position, deathSoundVolume);
+
     }
 } 
