@@ -58,7 +58,7 @@ public class Enemy : MonoBehaviour {
 
     private void Die()
     {
-        
+        FindObjectOfType<GameSession>().AddToScore(150);
         Destroy(gameObject);
         GameObject explosion = Instantiate(dealthVfx, transform.position, transform.rotation);
         Destroy(explosion, Timeduration);

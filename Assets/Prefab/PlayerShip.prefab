@@ -136,7 +136,7 @@ MonoBehaviour:
   LaserPreFab: {fileID: 1044150635870426, guid: b6a7a4847d36bdf4e814616dfe4a4145,
     type: 2}
   projectileFiringPeriod: 0.3
-  Health: 700
+  Health: 300
   dealthVfx: {fileID: 1627120537302302, guid: 5b514018f0967244fafbdb13cb8510ba, type: 2}
   deathSoundVolume: 0.7
   SoundVolume: 0.7
